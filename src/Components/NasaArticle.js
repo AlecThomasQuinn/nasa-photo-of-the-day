@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
+import NasaHeadline from './NasaHeadline';
+import NasaImgExplain from "./NasaImgExplain"; //you can tell it's an auto-import by it's use of doubles "" instead of singles ''
+import NasaImg from "./NasaImg";
+
+
 export default function NasaArticle(){
     const [imageURL, setImageURL] = useState('');
     const [title, setTitle] = useState('');
     const [date, setDate] = useState('2019-08-14');
     const [imgExplain, setImgExplain] = useState('');
-
-    //title
-    //date
-    //article
 
     useEffect(() => {
         axios
@@ -31,10 +32,23 @@ export default function NasaArticle(){
 
     return(
         <article>
-            <img src={imageURL}/>
+            {/* <img src={imageURL}/>
             <h1>{title}</h1>
             <h4>{date}</h4>
-            <p>{imgExplain}</p>
+            <p>{imgExplain}</p> */}
+
+            <NasaImg imageURL={imageURL} />
+            <NasaHeadline title={title} date={date}/>
+            <NasaImgExplain imgExplain={imgExplain}/>
+            
+
         </article>
     );
 };
+
+// I am passing no props and want to practice that so I am 
+// going to make each tag a component that takes props to pass 
+// title, date etc from NasaArticle
+
+// that was easier than I thought it would be, I am glad I had all those
+// notes in lambda-calculator

@@ -31,3 +31,14 @@
     transform: rotate(360deg);
   }
 }
+
+/* My styles start here ************************************************** */
+
+article {
+  background: #282c34;
+}
+
+article img{
+  width: 100%;
+  max-width: 1000px;
+}
