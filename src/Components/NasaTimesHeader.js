@@ -33,6 +33,7 @@ const NasaTimesStyled = styled.div`
         border-bottom: 2px solid black;
         margin: 0 0 44px 0;
         padding: 0;
+        background-color: crimson;
     }
 `;
 
