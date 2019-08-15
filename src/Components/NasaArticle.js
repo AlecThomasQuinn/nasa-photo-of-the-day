@@ -8,9 +8,9 @@ import NasaImg from "./NasaImg";
 import NasaTimesHeader from "./NasaTimesHeader";
 
 const FlexWrap = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space evenly;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
 
 `;
 
