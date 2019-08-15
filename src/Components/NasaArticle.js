@@ -4,6 +4,7 @@ import axios from 'axios';
 import NasaHeadline from './NasaHeadline';
 import NasaImgExplain from "./NasaImgExplain"; //you can tell it's an auto-import by it's use of doubles "" instead of singles ''
 import NasaImg from "./NasaImg";
+import NasaTimesHeader from "./NasaTimesHeader";
 
 
 export default function NasaArticle(){
@@ -37,8 +38,9 @@ export default function NasaArticle(){
             <h4>{date}</h4>
             <p>{imgExplain}</p> */}
 
+            <NasaTimesHeader date={date} />
             <NasaImg imageURL={imageURL} />
-            <NasaHeadline title={title} date={date}/>
+            <NasaHeadline title={title} />
             <NasaImgExplain imgExplain={imgExplain}/>
             
 
