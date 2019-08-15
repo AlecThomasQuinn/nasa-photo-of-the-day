@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import styled from 'styled-components';
 
 import NasaHeadline from './NasaHeadline';
 import NasaImgExplain from "./NasaImgExplain"; //you can tell it's an auto-import by it's use of doubles "" instead of singles ''
 import NasaImg from "./NasaImg";
 import NasaTimesHeader from "./NasaTimesHeader";
 
+const FlexWrap = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space evenly;
+
+`;
 
 export default function NasaArticle(){
     const [imageURL, setImageURL] = useState('');
@@ -39,9 +46,11 @@ export default function NasaArticle(){
             <p>{imgExplain}</p> */}
 
             <NasaTimesHeader date={date} />
-            <NasaImg imageURL={imageURL} />
-            <NasaHeadline title={title} />
-            <NasaImgExplain imgExplain={imgExplain}/>
+            <FlexWrap>
+                <NasaHeadline title={title} />
+                <NasaImg imageURL={imageURL} />
+                <NasaImgExplain imgExplain={imgExplain}/>
+            </FlexWrap>
             
 
         </article>

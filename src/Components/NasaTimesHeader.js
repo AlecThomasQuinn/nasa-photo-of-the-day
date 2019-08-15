@@ -1,10 +1,23 @@
 import React from "react";
 import styled from 'styled-components';
 
+
+// when importing fonts using styled components you import 
+// directly into the component (lines 15-17)
+// seems unweildy at scale but mayber there is a better way idk about yet
+//   ^
+//   |
+//   |
+// WRONG
+// You still link into the index.html, it is in the public folder
+
 const NasaTimesStyled = styled.div`
-    @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Crimson+Text&display=swap');
-    font-size: 22px;
-    background-color: crimson;
+    // @import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Crimson+Text&display=swap');
+    // font-size: 22px;
+    // background-color: crimson; 
+
+    // these comments do work, it only looks like it doesn't because
+    // the colors are not changing as usual on VSCode
 
     h1{
         font-size: 77px;
